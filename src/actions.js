@@ -45,14 +45,3 @@ export const thumbDownComment = function thumbDownComment(id) {
     id: id
   }
 }
-
-// export {ADD_COMMENT};
-// export {addComment};
-// export {REMOVE_COMMENT}:
-// export {removeComment}:
-// export {EDIT_COMMENT};
-// export {editComment};
-// export {THUMB_UP_COMMENT};
-// export {thumbUpComment};
-// export {THUMB_DOWN_COMMENT};
-// export {thumbDownComment};

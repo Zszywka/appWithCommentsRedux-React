@@ -4,10 +4,7 @@ import './index.css';
 import App from './App';
 import reducer from './reducer';
 import registerServiceWorker from './registerServiceWorker';
-
-
 import { addComment } from './actions.js';
-
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 // import DevTools from  './DevTools'
@@ -21,8 +18,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-registerServiceWorker();
-
 store.dispatch(addComment('pierwszy komentarz'));
 store.dispatch(addComment('drugi komentarz'));
 store.dispatch(addComment('trzeci komentarz'));
+
+registerServiceWorker();

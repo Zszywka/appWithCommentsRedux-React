@@ -18,7 +18,7 @@ function comments(state = [], action) {
           if (comment.id === action.id) {
             comment.text = action.text
           }
-          return comment;
+      return comment;
         });
 
     case THUMB_UP_COMMENT:
@@ -26,7 +26,7 @@ function comments(state = [], action) {
           if (comment.id === action.id) {
             return {...comment, votes: comment.votes + 1}
           }
-          return comment;
+      return comment;
         });
 
 
@@ -35,7 +35,7 @@ function comments(state = [], action) {
           if (action.id === comment.id){
             return {...comment, votes: comment.votes - 1}
           }
-          return comment;
+      return comment;
         });
 
     default:

@@ -3,7 +3,7 @@ import React from 'react';
 // const Comment = ({text, votes}) => <li>{text} <span>votes: {votes}</span></li>;
 
 const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComment, editComment, addComment}) =>
-  <li>
+  <div>
     {text}
     <span>votes: {votes}</span>
     <button onClick={() => thumbUpComment(id)}>Thumb up</button>
@@ -11,6 +11,6 @@ const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComme
     <button onClick={() => removeComment(id)}>Remove</button>
     <button onClick={() => editComment(id, text)}>Edit</button>
     <button onClick={() => addComment(id, text, votes)}>Add</button>
-  </li>;
+  </div>;
 
 export default Comment;

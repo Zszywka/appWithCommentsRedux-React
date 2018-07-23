@@ -1,5 +1,5 @@
 import {ADD_COMMENT, REMOVE_COMMENT, EDIT_COMMENT, THUMB_UP_COMMENT, THUMB_DOWN_COMMENT } from './actions.js';
-
+//reducer:
 function comments(state = [], action) {
   switch(action.type) {
     case ADD_COMMENT:
@@ -14,16 +14,15 @@ function comments(state = [], action) {
       return state.filter(comment => comment.id !== action.id);
 
     case EDIT_COMMENT:
-      return
-        state.map(comment => {
+      return state.map(comment => {
           if (comment.id === action.id) {
             comment.text = action.text
           }
+          return comment;
         });
 
     case THUMB_UP_COMMENT:
-      return
-        state.map(comment => {
+      return state.map(comment => {
           if (comment.id === action.id) {
             return {...comment, votes: comment.votes + 1}
           }
@@ -32,8 +31,7 @@ function comments(state = [], action) {
 
 
     case THUMB_DOWN_COMMENT:
-      return
-        state.map(comment => {
+      return state.map(comment => {
           if (action.id === comment.id){
             return {...comment, votes: comment.votes - 1}
           }
@@ -43,6 +41,6 @@ function comments(state = [], action) {
     default:
       return state;
   }
-}
+};
 
 export default comments;

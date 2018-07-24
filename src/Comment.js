@@ -9,8 +9,8 @@ const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComme
     <button onClick={() => thumbUpComment(id)}>Thumb up</button>
     <button onClick={() => thumbDownComment(id)}>Thumb down</button>
     <button onClick={() => removeComment(id)}>Remove</button>
-    <button onClick={() => editComment(id, text)}>Edit</button>
-    <button onClick={() => addComment(id, text, votes)}>Add</button>
+    <button onClick={() => editComment(id, prompt('edit'))}>Edit</button>
+    <button onClick={() => addComment(id, prompt('add'))}>Add</button>
   </div>;
 
 export default Comment;

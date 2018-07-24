@@ -9,10 +9,25 @@ import { addComment } from './actions.js';
 //store is visible every time you use the connect method -
 //without it, ReactRedux doesn't know what is the source
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-// import DevTools from  './DevTools'
-//store -> application's magazine
-const store = createStore(reducer);
+import { createStore, combineReducers} from 'redux';
+//import { createStore, applyMiddleware} from 'redux';
+// import { createLogger } from 'redux-logger';
+import DevTools from  './DevTools'
+
+// //use for logger
+// const logger = createLogger();
+// //store -> application's magazine
+// const store = createStore(
+//   reducer,
+//   applyMiddleware(logger)
+// );
+
+//use for DevTools:
+const store = createStore(
+  reducer,
+  DevTools.instrument()
+);
+
 //a view where Redux connects with React,
 ReactDOM.render(
   // to props.store we assign the store variable

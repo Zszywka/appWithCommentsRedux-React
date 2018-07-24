@@ -6,10 +6,10 @@ const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComme
   <div>
     {text}
     <span>votes: {votes}</span>
-    <button onClick={() => thumbUpComment(id)}>Thumb up</button>
-    <button onClick={() => thumbDownComment(id)}>Thumb down</button>
-    <button onClick={() => removeComment(id)}>Remove</button>
-    <button onClick={() => editComment(id, prompt('edit'))}>Edit</button>
+    <button onClick={() => thumbUpComment(id)}>	&#128077;</button>
+    <button onClick={() => thumbDownComment(id)}>&#128078;</button>
+    <button onClick={() => removeComment(id)}>&#9986;</button>
+    <button onClick={() => editComment(id, prompt('edit'))}>&#x270E;</button>
   </div>;
 
 export default Comment;

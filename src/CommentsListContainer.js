@@ -1,7 +1,7 @@
 //connect ->used to connect components to the STORE(I argument->mapStateToProps)
 import {connect} from 'react-redux';
 import CommentsList from './CommentsList';
-
+import {addComment} from './actions.js'
 //component Container, works with REDUX
 //dividing the status into appropriate props
 //and forwarding them to the CommentsList
@@ -11,4 +11,8 @@ const mapStateToProps = state => ({
   comments: state.comments
 });
 
-export default connect(mapStateToProps)(CommentsList);
+const mapDispatchToProps = dispatch => ({
+  addComment: (text) => dispatch(addComment(text))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentsList);

@@ -1,13 +1,14 @@
+//library for generating an automatic id
 import uuid from 'uuid';
-
-// typy akcji:
+//type of action:
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-// kreatory akcji:
+//creator of action:
+//give -> action object
 export const addComment = function addComment(text) {
   return {
     type: ADD_COMMENT,

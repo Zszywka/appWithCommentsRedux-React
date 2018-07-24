@@ -1,7 +1,11 @@
+////connect ->used to connect components to the STORE(II arguments->mapDispatchToProps)
 import {connect} from 'react-redux';
 import Comment from './Comment';
 import {thumbUpComment, thumbDownComment, addComment, removeComment, editComment} from './actions.js';
 
+//connect action to STORE (Combining actions with React)
+//Packaging for the Comment.js component and conect him to Redux
+//mapuje odpowiednie wywołanie akcji do propsów
 const mapDispatchToProps = dispatch => ({
   thumbUpComment: (id) => dispatch(thumbUpComment(id)),
   thumbDownComment: (id) => dispatch(thumbDownComment(id)),

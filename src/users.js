@@ -3,3 +3,5 @@
 function users(state = [], action) {
     return state;
 }
+//(for future)
+export default users;

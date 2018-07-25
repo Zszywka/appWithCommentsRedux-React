@@ -1,0 +1,12 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+imput {
+  display: inline-block;
+  border-style: none;
+  border: 5px solid blue;
+  border-radius: 6px;
+  padding: 10px;
+}

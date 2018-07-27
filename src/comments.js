@@ -16,7 +16,7 @@ function comments(state = [], action) {
 
     case EDIT_COMMENT:
       return state.map(comment => {
-          if (comment.id === action.id) {
+          if (comment.id === action.id && action.text != NULL) {
             comment.text = action.text
             // return {...comment, text: action.text}
           }
@@ -25,7 +25,7 @@ function comments(state = [], action) {
 
     case THUMB_UP_COMMENT:
       return state.map(comment => {
-          if (comment.id === action.id &&& action.text != NULL) {
+          if (comment.id === action.id) {
             comment.votes = comment.votes + 1
             // return {...comment, votes: comment.votes + 1}
           }

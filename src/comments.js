@@ -9,6 +9,8 @@ function comments(state = [], action) {
         text: action.text,
         votes: 0
       },
+      //oraz wszytskie stare komentarze
+
       ...state];
 
     case REMOVE_COMMENT:
@@ -18,14 +20,14 @@ function comments(state = [], action) {
       return state.map(comment => {
           if (comment.id === action.id) {
             comment.text = action.text
-            // return {...comment, comment: comment.text = action.text}
+            // return {...comment, text: action.text}
           }
       return comment;
         });
 
     case THUMB_UP_COMMENT:
       return state.map(comment => {
-          if (comment.id === action.id) {
+          if (comment.id === action.id &&& action.text != NULL) {
             comment.votes = comment.votes + 1
             // return {...comment, votes: comment.votes + 1}
           }

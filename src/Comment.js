@@ -1,7 +1,5 @@
 import React from 'react';
-//show one comment
-//text -> text of CommentsList
-//votes -> the number of votes cast on the comment
+
 const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComment, editComment, addComment}) =>
   <div>
     {text}

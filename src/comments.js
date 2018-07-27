@@ -1,6 +1,5 @@
-//reducer have to recognize type of data and that's why we import variables defining the type of action:
 import {ADD_COMMENT, REMOVE_COMMENT, EDIT_COMMENT, THUMB_UP_COMMENT, THUMB_DOWN_COMMENT } from './actions.js';
-//one small reducer:
+
 function comments(state = [], action) {
   switch(action.type) {
     case ADD_COMMENT:
@@ -9,8 +8,7 @@ function comments(state = [], action) {
         text: action.text,
         votes: 0
       },
-      //oraz wszytskie stare komentarze
-
+      //and all old comments
       ...state];
 
     case REMOVE_COMMENT:

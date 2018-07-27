@@ -16,7 +16,7 @@ function comments(state = [], action) {
 
     case EDIT_COMMENT:
       return state.map(comment => {
-          if (comment.id === action.id && action.text != NULL) {
+          if (comment.id === action.id && action.text != null) {
             comment.text = action.text
             // return {...comment, text: action.text}
           }
